@@ -17,7 +17,7 @@ chmod g+w /home/$uname/Downloads/
 
 # Install the firewall (CSF)
 cd /usr/local/src
-wget http://configserver.com/free/csf.tgz
+wget https://download.configserver.com/csf.tgz
 tar xzf csf.tgz
 cd csf
 ./install.generic.sh
@@ -31,9 +31,9 @@ csf -r
 
 # Install libevent
 cd /usr/local/src
-wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
-tar xzf libevent-2.0.22-stable.tar.gz
-cd libevent-2.0.22-stable
+wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
+tar xzf libevent-2.1.8-stable.tar.gz
+cd libevent-2.1.8-stable
 ./configure --prefix=/usr
 make
 make install
@@ -46,9 +46,9 @@ export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 
 # Install transmission
 cd /usr/local/src
-wget https://transmission.cachefly.net/transmission-2.84.tar.xz
-tar xvf transmission-2.84.tar.xz
-cd transmission-2.84
+wget https://github.com/transmission/transmission-releases/raw/master/transmission-2.92.tar.xz
+tar xvf transmission-2.92.tar.xz
+cd transmission-2.92
 ./configure --prefix=/usr
 make
 make install
